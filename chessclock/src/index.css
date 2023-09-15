@@ -1,0 +1,134 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+.icono{
+  font-weight: bold;
+}
+
+.chess-clock{
+  color: white;
+  background-color: darkolivegreen ;
+  margin: auto;
+  width: 60%;
+  width: 300px;
+height: 550px;
+width: 90%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+}
+
+
+
+.jugador2win{
+  background-color: darkblue;
+  color: white;
+
+}
+
+.desaparecer{
+  display: none;
+}
+
+
+.aparecer{
+  display: initial;
+}
+
+.icono{
+  font-size: 20px;
+}
+
+
+
+.cont_header{
+  background-color: brown;
+  margin: auto;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.boton{
+  background-color: rgb(44, 62, 80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boton h1{
+  font-size: 50px;
+  margin-top: 0;
+}
+
+
+.controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls a{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1024px){
+  body{
+    background-color: brown;
+  }
+}
