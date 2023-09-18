@@ -52,6 +52,22 @@ const [speed, setSpeed] = useState(100); // Estado para cambiar la velocidad
       ganador1.classList.add("aparecer");
     }
 
+
+    /*CODIGO PARA MOSTRAR LA BANDERA CUANDO UNO PIERDE*/
+if(player1Time == 0){
+  let numero1 = document.querySelector(".numero1");
+  let bandera1 = document.querySelector(".bandera1");
+  numero1.classList.add("eliminar");
+  bandera1.classList.add("aparecer")
+} else if(player2Time == 0){
+  let numero2 = document.querySelector(".numero2");
+  let bandera2 = document.querySelector(".bandera2");
+  numero2.classList.add("eliminar");
+  bandera2.classList.add("aparecer")
+}
+
+
+
     return () => clearInterval(interval);
   }, [activePlayer, player1Time, player2Time, isPaused]);
 
@@ -74,6 +90,24 @@ const [speed, setSpeed] = useState(100); // Estado para cambiar la velocidad
     clearInterval(player2Time);
     setPlayer1Time(tiempo);
     setPlayer2Time(tiempo);
+
+
+    if(player1Time == 0){
+let numero1 = document.querySelector(".numero1");
+let bandera1 = document.querySelector(".bandera1");
+
+      numero1.classList.add("aparecer");
+      bandera1.classList.remove("aparecer");
+      bandera1.classList.add("eliminar");
+    } else if (player2Time == 0){
+      let numero2 = document.querySelector(".numero2");
+      let bandera2 = document.querySelector(".bandera2");
+
+      numero2.classList.add("aparecer");
+      bandera2.classList.remove("aparecer");
+      bandera2.classList.add("eliminar");
+    }
+
 
     setActivePlayer(null);
     setIsPaused(false); // Asegúrate de que los relojes no estén en pausa al reiniciar
@@ -356,7 +390,7 @@ const handleSetTime = () => {
         onClick={() => { handleClick(1) }}
       >
         <h2>Jugador 1</h2>
-        <div className="time"><h1>{Math.floor(player1Time / 60)}:{player1Time % 60}</h1></div>
+        <div className="time"><h1 className='numero1'  >{Math.floor(player1Time / 60)}:{player1Time % 60} </h1> <p className='bandera1 eliminar'  ><i class="fa-solid fa-flag"></i></p></div>
       </div>
 
       <div className="controls">
@@ -369,7 +403,7 @@ const handleSetTime = () => {
         onClick={() => { handleClick(2)}}
       >
         <h2>Jugador 2</h2>
-        <div className="time"><h1>{Math.floor(player2Time / 60)}:{player2Time % 60}</h1></div>
+        <div className="time"><h1  className='numero2' >{Math.floor(player2Time / 60)}:{player2Time % 60}</h1> <p className='bandera2 eliminar'  ><i class="fa-solid fa-flag"></i></p></div>
       </div>
     </div>
 
