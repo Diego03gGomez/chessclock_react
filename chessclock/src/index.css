@@ -84,9 +84,105 @@ width: 90%;
   cursor: pointer;
 }
 
+/*ESTILOS PARA EL MENU */
+
+.fondo_menu{
+  transition: all 0.30s;
+ /* background-color: rgba(65, 65, 65, 0.288);*/
+  position: fixed;
+  top: 0;
+  width: 0px;
+  height: 100%;
+}
+.trasladar{
+  transition: all 0.30s;
+  width: 100%;
+}
+
+
+.cont_menu{
+  background-color: #d35400;
+  float: left;
+  width: 400px;
+  width: 50%;
+font-size: 0px;
+  height: 100%;
+  color: white;
+  position: absolute;
+  
+  left: 0;
+}
+
+.eliminar{
+  display: none;
+}
+
+.aparecer{
+  display: initial;
+}
+
+.agrandar_letras{
+  font-size: 17px;
+}
+
+
+.opciones h3{
+ /* background-color: red;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.opciones h3 p{
+  color: white;
+  line-height: 1px;
+}
 
 
 
+
+
+.cont_x{
+  margin: auto;
+  width: 90%;
+margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 30px;
+}
+
+
+.opciones{
+  margin: auto;
+  width: 90%;
+}
+
+/*
+.boton1{
+background-color: #d35400;
+}*/
+
+
+
+.fondo_color{
+  background-color: #d35400;
+}
+
+
+.tiempo {
+  cursor: pointer;
+}
+
+.cont_x{
+  cursor: pointer;
+}
+
+
+.icono{
+  cursor: pointer;
+}
 
 
 
