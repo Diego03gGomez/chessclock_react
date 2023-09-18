@@ -10,12 +10,21 @@
 import React, { useState, useEffect } from 'react';
 
 function ChessClock() {
-  const [player1Time, setPlayer1Time] = useState(100); // ACA SE PONE EL TIEMPO
-  const [player2Time, setPlayer2Time] = useState(100); // ACA SE PONE EL TIEMPO
+
+
+const [tiempo, settiempo] = useState(200)
+
+
+  const [player1Time, setPlayer1Time] = useState(tiempo); // ACA SE PONE EL TIEMPO
+  const [player2Time, setPlayer2Time] = useState(tiempo); // ACA SE PONE EL TIEMPO
   const [activePlayer, setActivePlayer] = useState(null); // Jugador activo (1 o 2)
   const [isPaused, setIsPaused] = useState(false); // ESTADO PARA PAUSAR EL TIEMPO
 
 /*ESTADO PARA CAMBIAR EL COLOR DE <FONDO></FONDO*/
+const [speed, setSpeed] = useState(100); // Estado para cambiar la velocidad
+
+
+
 
 
 
@@ -27,11 +36,11 @@ function ChessClock() {
       if (activePlayer === 1 && player1Time > 0) {
         interval = setInterval(() => {
           setPlayer1Time(player1Time - 1);
-        }, 100); // VELOCIDAD DE RELOJ
+        }, speed); // VELOCIDAD DE RELOJ
       } else if (activePlayer === 2 && player2Time > 0) {
         interval = setInterval(() => {
           setPlayer2Time(player2Time - 1);
-        }, 100); //VELOCIDAD DE RELOJ
+        }, speed); //VELOCIDAD DE RELOJ
       }
     }
 
@@ -61,10 +70,11 @@ function ChessClock() {
   };
 
   const resetClock = () => {
-    clearInterval(player1Time);
+   clearInterval(player1Time);
     clearInterval(player2Time);
-    setPlayer1Time(600);
-    setPlayer2Time(600);
+    setPlayer1Time(tiempo);
+    setPlayer2Time(tiempo);
+
     setActivePlayer(null);
     setIsPaused(false); // Asegúrate de que los relojes no estén en pausa al reiniciar
   };
@@ -78,8 +88,9 @@ function ChessClock() {
   
     if (!isNaN(numero)) {
       console.log(numero);
-      setPlayer1Time(elemento*60)
+     setPlayer1Time(elemento*60)
       setPlayer2Time(elemento*60)
+    settiempo(elemento*60)
     } else {
       console.log("No es un número válido");
     }
@@ -113,16 +124,28 @@ const trasladar = () => {
 
 
 
-const [newTime, setNewTime] = useState(''); // Estado para almacenar el valor del input
+
+
+
+
+/*CODIGO PARA EL BOTON DE EDITAR EL TIEMPO */
+
+
+
+const [newMinutes, setNewMinutes] = useState(''); // Estado para almacenar los minutos
+const [newSeconds, setNewSeconds] = useState(''); // Estado para almacenar los segundos
 
 const handleSetTime = () => {
-  // Convierte el valor de newTime en un número antes de establecerlo
-  const timeValue = parseInt(newTime*60);
+  const minutesValue = parseInt(newMinutes);
+  const secondsValue = parseInt(newSeconds);
   
-  if (!isNaN(timeValue)) {
-    setPlayer1Time(timeValue);
-    setPlayer2Time(timeValue);
-    setNewTime(''); // Limpia el input después de establecer los tiempos
+  if (!isNaN(minutesValue) && !isNaN(secondsValue)) {
+    const totalSeconds = minutesValue * 60 + secondsValue;
+    setPlayer1Time(totalSeconds);
+    setPlayer2Time(totalSeconds);
+    settiempo(totalSeconds)
+    setNewMinutes('');
+    setNewSeconds('');
   }
 };
 
@@ -296,19 +319,27 @@ const handleSetTime = () => {
 
 
 
-
 <div className="cont_confg">
-
-<input
-        type="number"
-        placeholder="Nuevo tiempo"
-        value={newTime}
-        onChange={(e) => setNewTime(e.target.value)}
-      />
-      <button onClick={handleSetTime}>Establecer Tiempo</button>
-
-
-</div>
+        <input
+          type="number"
+          placeholder="Minutos"
+          value={newMinutes}
+          onChange={(e) => setNewMinutes(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Segundos"
+          value={newSeconds}
+          onChange={(e) => setNewSeconds(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="Velocidad (ms)"
+          value={speed}
+          onChange={(e) => setSpeed(parseInt(e.target.value))}
+        />
+        <button onClick={handleSetTime}>Establecer Tiempo</button>
+      </div>
 
 
 
