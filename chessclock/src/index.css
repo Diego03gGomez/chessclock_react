@@ -24,6 +24,7 @@ width: 90%;
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 10px;
+  border-radius: 2em;
 }
 
 
@@ -65,6 +66,8 @@ width: 90%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 9px;
+  color: #656565;;
 }
 
 .boton h1{
@@ -105,6 +108,7 @@ width: 90%;
   float: left;
   width: 400px;
   width: 50%;
+  width: 64%;
 font-size: 0px;
   height: 100%;
   color: white;
@@ -132,6 +136,11 @@ font-size: 0px;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  border-color: white;
+  border-style: solid;
+  border-right: none;
+  border-left: none;
+  padding: 10px 0;
 }
 
 
@@ -148,6 +157,7 @@ font-size: 0px;
   margin: auto;
   width: 90%;
 margin-top: 50px;
+margin-top: 30px;
   display: flex;
   justify-content: flex-end;
   font-size: 30px;
@@ -167,7 +177,8 @@ background-color: #d35400;
 
 
 .fondo_color{
-  background-color: #d35400;
+  background-color: #01993e;
+  color: white;
 }
 
 
@@ -185,6 +196,79 @@ background-color: #d35400;
 }
 
 
+/*ESTILOS PARA EL FONDO DE DEITAR*/
+
+
+.fondo_editar{
+  background-color: #00000099;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cont_confg{
+  background-color: #27272a;
+color: #d6dbdc;
+margin:130px auto;
+width: 80%;
+padding: 20px;
+}
+
+.cont_botones{
+ /* background-color: red;*/
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+}
+
+
+.titulo_confg{
+  text-align: center;
+}
+
+
+
+.div_minutos, .div_segundos, .div_velocidad{
+ /* background-color: red;*/
+  text-align: center;
+  margin: auto;
+margin-top: 60px;
+}
+
+.cont_confg input{
+font-size: 20px;
+color: white;
+background-color: #ff000000
+}
+
+.cont_confg input::placeholder{
+  color: white;
+}
+
+
+.cancelar{
+  color: #EF4444;
+
+}
+.establecer{
+  background-color: #4D7C0F;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.cancelar, .establecer{
+  cursor: pointer;
+}
 
 
 
@@ -197,6 +281,56 @@ background-color: #d35400;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px){
+  body{
+    background-color: red;
+  }
+
+  .cont_confg input{
+    font-size: 13px;
+  }
+
+  .cont_confg{
+    margin: 20px auto;
+    padding: 7px;
+  }
+
+  .cont_botones{
+    flex-direction: column;
+  }
+}
 
 
 

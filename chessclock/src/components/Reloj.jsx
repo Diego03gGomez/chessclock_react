@@ -181,9 +181,28 @@ const handleSetTime = () => {
     setNewMinutes('');
     setNewSeconds('');
   }
+
+  let fondo_editar = document.querySelector(".fondo_editar");
+fondo_editar.classList.toggle("eliminar")
 };
 
 
+
+
+
+const  mostrar_editar = () => {
+let fondo_editar = document.querySelector(".fondo_editar");
+fondo_editar.classList.toggle("eliminar")
+
+}
+
+
+
+
+const cerrar_conf = () => {
+  let fondo_editar = document.querySelector(".fondo_editar");
+fondo_editar.classList.toggle("eliminar")
+}
 
 
 
@@ -269,7 +288,7 @@ const handleSetTime = () => {
 
 
 
-  <h3   ><i class="fa-solid fa-pencil"></i><div className="tiempo">
+  <h3 onClick={()=> {mostrar_editar(); trasladar();}}   ><i class="fa-solid fa-pencil"></i><div className="tiempo">
   <p>Editar</p>
 <a  >0.00</a>
   </div></h3>
@@ -353,27 +372,72 @@ const handleSetTime = () => {
 
 
 
+<div class="fondo_editar  eliminar">
+
+
 <div className="cont_confg">
+<div className="titulo_confg">
+
+<h1>Editar Tiempo</h1>
+
+
+</div>
+
+
+
+<div className="div_minutos">
+
+<h2>Agregar Minutos.</h2>
         <input
           type="number"
           placeholder="Minutos"
           value={newMinutes}
           onChange={(e) => setNewMinutes(e.target.value)}
         />
+
+
+</div>
+
+
+<div className="div_segundos">
+<h2>Agregar Segundos.</h2>
+
         <input
+
           type="number"
           placeholder="Segundos"
           value={newSeconds}
           onChange={(e) => setNewSeconds(e.target.value)}
         />
+
+</div>
+
+
+<div className="div_velocidad">
+<h2>Editar velocidad.</h2>
         <input
           type="number"
           placeholder="Velocidad (ms)"
           value={speed}
           onChange={(e) => setSpeed(parseInt(e.target.value))}
         />
-        <button onClick={handleSetTime}>Establecer Tiempo</button>
+
+
+</div>
+
+
+<div className="cont_botones">
+
+<a onClick={cerrar_conf} className='cancelar'  >Cerrar</a>
+        <a className='establecer'  onClick={handleSetTime}>Establecer Tiempo</a>
+</div>
+
+
       </div>
+
+
+
+</div>
 
 
 
