@@ -28,15 +28,16 @@ width: 90%;
 }
 
 
-
+/*
 .jugador2win{
   background-color: darkblue;
   color: white;
 
-}
+}*/
 
 .desaparecer{
   display: none;
+  
 }
 
 
@@ -48,10 +49,14 @@ width: 90%;
   font-size: 20px;
 }
 
+header{
+
+}
+
 
 
 .cont_header{
-  background-color: brown;
+ /* background-color: brown;*/
   margin: auto;
   width: 95%;
   display: flex;
@@ -81,6 +86,7 @@ width: 90%;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  background-color: #003558;
 }
 
 .controls a{
@@ -104,7 +110,7 @@ width: 90%;
 
 
 .cont_menu{
-  background-color: #d35400;
+  background-color: #EF4444;;
   float: left;
   width: 400px;
   width: 50%;
@@ -136,7 +142,7 @@ font-size: 0px;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-color: white;
+  border-color: #ffffff4f;
   border-style: solid;
   border-right: none;
   border-left: none;
@@ -178,6 +184,7 @@ background-color: #d35400;
 
 .fondo_color{
   background-color: #01993e;
+  background-color: #EF4444;
   color: white;
 }
 
@@ -217,6 +224,7 @@ color: #d6dbdc;
 margin:130px auto;
 width: 80%;
 padding: 20px;
+border-radius: 10px;
 }
 
 .cont_botones{
@@ -260,16 +268,25 @@ background-color: #ff000000
 }
 .establecer{
   background-color: #4D7C0F;
+  background-color: #01993e;
   color: white;
   font-weight: bold;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .cancelar, .establecer{
   cursor: pointer;
 }
 
+
+.jugador1win{
+  color: #00ffd2;
+}
+
+.jugador2win{
+  color: #00ffd2;
+}
 
 
 
@@ -315,7 +332,7 @@ background-color: #ff000000
 
 @media (max-width: 400px){
   body{
-    background-color: red;
+  /*  background-color: red;*/
   }
 
   .cont_confg input{

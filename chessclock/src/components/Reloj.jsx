@@ -106,8 +106,20 @@ let bandera1 = document.querySelector(".bandera1");
       numero2.classList.add("aparecer");
       bandera2.classList.remove("aparecer");
       bandera2.classList.add("eliminar");
-    }
 
+let ganador1 = document.querySelector(".jugador1win");
+
+ganador1.classList.remove("aparecer");
+
+ganador1.classList.add("eliminar");
+
+
+
+
+    }
+    let ganador2 = document.querySelector(".jugador2win");
+    ganador2.classList.remove("aparecer");
+    ganador2.classList.add("desaparecer")
 
     setActivePlayer(null);
     setIsPaused(false); // Asegúrate de que los relojes no estén en pausa al reiniciar
@@ -446,15 +458,16 @@ fondo_editar.classList.toggle("eliminar")
 
 
     <div className="chess-clock">
-      <h1 className='jugador2win desaparecer'>El jugador 2 es el ganador</h1>
-      <h1 className='jugador1win desaparecer'>El jugador 1 es el ganador</h1>
+     
+     
 
       <div
         className={`player ${activePlayer === 1 ? 'active fondo_color' : ''} boton boton1     `}
         onClick={() => { handleClick(1) }}
       >
         <h2>Jugador 1</h2>
-        <div className="time"><h1 className='numero1'  >{Math.floor(player1Time / 60)}:{player1Time % 60} </h1> <p className='bandera1 eliminar'  ><i class="fa-solid fa-flag"></i></p></div>
+        <h1 className='jugador1win desaparecer'>Ganador <i class="fa-solid fa-medal"></i></h1>
+        <div className="time"><h1 className='numero1'  >{Math.floor(player1Time / 60)}:{player1Time % 60} </h1> <h1 className='bandera1 eliminar'  ><i class="fa-solid fa-flag"></i></h1></div>
       </div>
 
       <div className="controls">
@@ -467,7 +480,8 @@ fondo_editar.classList.toggle("eliminar")
         onClick={() => { handleClick(2)}}
       >
         <h2>Jugador 2</h2>
-        <div className="time"><h1  className='numero2' >{Math.floor(player2Time / 60)}:{player2Time % 60}</h1> <p className='bandera2 eliminar'  ><i class="fa-solid fa-flag"></i></p></div>
+        <h1 className='jugador2win desaparecer'>Ganador  <i class="fa-solid fa-medal"></i></h1>
+        <div className="time"><h1  className='numero2' >{Math.floor(player2Time / 60)}:{player2Time % 60}</h1> <h1 className='bandera2 eliminar'  ><i class="fa-solid fa-flag"></i></h1></div>
       </div>
     </div>
 
