@@ -428,7 +428,7 @@ fondo_editar.classList.toggle("eliminar")
 <h2>Agregar Minutos.</h2>
         <input
           type="number"
-          placeholder="Minutos"
+          placeholder="Minutos..."
           value={newMinutes}
           onChange={(e) => setNewMinutes(e.target.value)}
         />
@@ -443,7 +443,7 @@ fondo_editar.classList.toggle("eliminar")
         <input
 
           type="number"
-          placeholder="Segundos"
+          placeholder="Segundos..."
           value={newSeconds}
           onChange={(e) => setNewSeconds(e.target.value)}
         />
