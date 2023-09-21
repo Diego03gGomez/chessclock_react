@@ -58,12 +58,26 @@ if(player1Time == 0){
   let numero1 = document.querySelector(".numero1");
   let bandera1 = document.querySelector(".bandera1");
   numero1.classList.add("eliminar");
-  bandera1.classList.add("aparecer")
+  bandera1.classList.add("aparecer");
+
+  /*CODIGO PARA DESABILITAR LOS BOTNTES AL LLEGAR A 0*/
+  let div1 = document.querySelector(".boton1");
+  div1.classList.add("desa")
+  let div2 = document.querySelector(".boton2");
+  div2.classList.add("desa")
+
+
 } else if(player2Time == 0){
   let numero2 = document.querySelector(".numero2");
   let bandera2 = document.querySelector(".bandera2");
   numero2.classList.add("eliminar");
   bandera2.classList.add("aparecer")
+
+    /*CODIGO PARA DESABILITAR LOS BOTNTES AL LLEGAR A 0*/
+    let div1 = document.querySelector(".boton1");
+    div1.classList.add("desa")
+    let div2 = document.querySelector(".boton2");
+    div2.classList.add("desa")
 }
 
 
@@ -84,6 +98,10 @@ if(player1Time == 0){
   const togglePause = () => {
     setIsPaused(!isPaused); // Cambiar el estado de pausa
   };
+
+
+ 
+
 
   const resetClock = () => {
    clearInterval(player1Time);
@@ -120,6 +138,14 @@ ganador1.classList.add("eliminar");
     let ganador2 = document.querySelector(".jugador2win");
     ganador2.classList.remove("aparecer");
     ganador2.classList.add("desaparecer")
+
+
+  /*CODIGO PARA DESABILITAR LOS BOTNTES AL LLEGAR A 0*/
+  let div1 = document.querySelector(".boton1");
+  div1.classList.remove("desa")
+  let div2 = document.querySelector(".boton2");
+  div2.classList.remove("desa")
+
 
     setActivePlayer(null);
     setIsPaused(false); // Asegúrate de que los relojes no estén en pausa al reiniciar
@@ -244,7 +270,7 @@ fondo_editar.classList.toggle("eliminar")
 <header>
 <div className="cont_header">
 <a  onClick={trasladar}  className='icono'  ><i class="fa-solid fa-bars"></i></a>
-<h2>RELOJ DE <span>AJEDREZ</span></h2>
+<h2>CHESS <span>CLOCK</span></h2>
 
 </div>
 </header>
@@ -462,7 +488,7 @@ fondo_editar.classList.toggle("eliminar")
      
 
       <div
-        className={`player ${activePlayer === 1 ? 'active fondo_color' : ''} boton boton1     `}
+        className={`player ${activePlayer === 1 ? 'active fondo_color' : ''} boton boton1      `}
         onClick={() => { handleClick(1) }}
       >
         <h2>Jugador 1</h2>

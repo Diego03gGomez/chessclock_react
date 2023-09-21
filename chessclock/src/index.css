@@ -293,7 +293,23 @@ background-color: #ff000000
 .chess-clock{
   margin-top: 35px;
   margin-top: 50px;
+  margin-top: 70px;
 }
+
+.cont_header span{
+  color: #EF4444;
+}
+
+
+
+
+/*ESTILO PARA DESABILTIAR EL BOTON*/
+.desa{
+  cursor: not-allowed; /* Cambia el cursor para indicar que no se puede hacer clic */
+  pointer-events: none; /* Evita que el div sea interactivo */
+}
+
+
 
 
 
@@ -361,6 +377,34 @@ background-color: #ff000000
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
