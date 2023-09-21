@@ -12,7 +12,7 @@ import React, { useState, useEffect } from 'react';
 function ChessClock() {
 
 
-const [tiempo, settiempo] = useState(200)
+const [tiempo, settiempo] = useState(300)
 
 
   const [player1Time, setPlayer1Time] = useState(tiempo); // ACA SE PONE EL TIEMPO
@@ -21,7 +21,7 @@ const [tiempo, settiempo] = useState(200)
   const [isPaused, setIsPaused] = useState(false); // ESTADO PARA PAUSAR EL TIEMPO
 
 /*ESTADO PARA CAMBIAR EL COLOR DE <FONDO></FONDO*/
-const [speed, setSpeed] = useState(100); // Estado para cambiar la velocidad
+const [speed, setSpeed] = useState(150); // Estado para cambiar la velocidad
 
 
 
