@@ -4,6 +4,8 @@
 
 body{
   margin: 0;
+  color: white;
+  background-color: #0a1023;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Inter', sans-serif;
@@ -14,7 +16,7 @@ body{
 
 .chess-clock{
   color: white;
-  background-color: darkolivegreen ;
+  background-color: rgb(44, 62, 80) ;
   margin: auto;
   width: 60%;
   width: 300px;
@@ -58,7 +60,7 @@ header{
 .cont_header{
  /* background-color: brown;*/
   margin: auto;
-  width: 95%;
+  width: 90%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -288,6 +290,11 @@ background-color: #ff000000
   color: #00ffd2;
 }
 
+.chess-clock{
+  margin-top: 35px;
+  margin-top: 50px;
+}
+
 
 
 
@@ -347,6 +354,12 @@ background-color: #ff000000
   .cont_botones{
     flex-direction: column;
   }
+
+
+.chess-clock{
+  margin-top: 10px;
+}
+
 }
 
 
@@ -376,6 +389,30 @@ background-color: #ff000000
 
 @media (min-width:1024px){
   body{
-    background-color: brown;
+   
   }
+
+  .chess-clock{
+    margin-top: 71px;
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+
+  .cont_menu{
+    width: 30%;
+  }
+
+.controls{
+  font-size: 30px;
+  flex-direction: column;
+  gap: 104px;
+}
+
+.boton{
+  padding: 250px 0;
+}
+
+.cont_header{
+  width: 80%;
+}
+
 }
