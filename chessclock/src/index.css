@@ -254,9 +254,14 @@ margin-top: 60px;
 }
 
 .cont_confg input{
-font-size: 20px;
-color: white;
-background-color: #ff000000
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  color: #ffffff;
+  border-radius: 8px;
+  border-color: #ff890000;
+  background-color: #002d741f;
+
 }
 
 .cont_confg input::placeholder{
@@ -271,6 +276,8 @@ background-color: #ff000000
 .establecer{
   background-color: #4D7C0F;
   background-color: #01993e;
+  border-color: #01993e;
+  border-style: solid;
   color: white;
   font-weight: bold;
   border-radius: 5px;

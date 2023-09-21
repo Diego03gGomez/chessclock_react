@@ -467,7 +467,7 @@ fondo_editar.classList.toggle("eliminar")
 <div className="cont_botones">
 
 <a onClick={cerrar_conf} className='cancelar'  >Cerrar</a>
-        <a className='establecer'  onClick={handleSetTime}>Establecer Tiempo</a>
+        <button className='establecer'  onClick={handleSetTime}>Establecer Tiempo</button>
 </div>
 
 
