@@ -317,6 +317,12 @@ margin-top: 60px;
 }
 
 
+.controls a{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 
 
 
@@ -445,7 +451,9 @@ margin-top: 60px;
 
   .chess-clock{
     margin-top: 71px;
+    margin-top: 50px;
     grid-template-columns: 2fr 1fr 2fr;
+   
   }
 
   .cont_menu{
@@ -460,7 +468,12 @@ margin-top: 60px;
 
 .boton{
   padding: 250px 0;
+
 }
+
+
+
+
 
 .cont_header{
   width: 80%;
